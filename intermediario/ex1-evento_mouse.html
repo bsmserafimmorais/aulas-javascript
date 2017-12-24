@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function apertou(){
+			alert("apertou mouse");
+		}
+		function moveu(){
+			alert("moveu");
+		}
+		function moveu(){
+			alert("tirar");
+		}
+		function btndireito(){
+			alert("btn direito");
+
+			return false;
+		}
+	</script>
+</head>
+<body>
+	<button onmousedown="apertou()">Apertar btn</button>
+	<button onmousemove= "moveu()">mover btn</button>
+	<button onmouseover="tiro()">tirar btn</button>
+	<button oncontextmenu="return btndireito()">btn direito</button>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		function adicionarIngrediente(){
+			var ing = document.getElementById("ingrediente").value;
+			var listaHtml = document.getElementById("lista").innerHTML;
+
+			listaHtml = listaHtml + "<li>"+ing+"</li>";
+
+			document.getElementById("lista").innerHTML = listaHtml;
+		}
+
+	</script>
+</head>
+<body>
+	<h3>Ingredientes de bolo</h3>
+
+	<input type="text" id="ingrediente">
+	<br><br>
+	<button onclick="adicionarIngrediente()">Adicionar</button>
+	<br><br>
+	<ul id="lista">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+	</ul>
+
+</body>
+</html>

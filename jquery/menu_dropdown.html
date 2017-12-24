@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.menu{
+			height: 40px;
+			background: #000;
+			color: #FFF;
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		li{
+			float: left;
+			padding: 0px 20px;
+			line-height: 40px;
+			cursor: pointer;
+		}
+		.menu1{
+			height: 40px;
+		}
+		.menu2{
+			position: absolute;
+			margin-left: -20px;
+			width: 120px;
+			height: 120px;
+			background: #000;
+			display: none;
+			text-align: center;
+
+		}
+	</style>
+</head>
+<body>
+<div class="menu">
+	<ul>
+		<li>
+			<div class="menu1">Home</div>
+			<div class="menu2">
+				page1 <br>	
+				page2<br>
+				page3
+			</div>
+		</li>
+		<li>Sobre</li>
+		<li>
+			<div class="menu1">Contato</div>
+			<div class="menu2">
+				page1 <br>	
+				page2<br>
+				page3
+			</div>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('li').hover(function(){
+			$(this).find('.menu2').slideDown();
+		}, function(){
+			$(this).find('.menu2').slideUp();
+		});
+	});
+</script>
+
+</body>
+</html>

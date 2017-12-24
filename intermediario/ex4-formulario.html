@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		function mudou(objeto){
+			alert("Selecionou: "+objeto.value);
+		}
+		function focou(){
+			alert("Focou");
+		}
+
+	</script>
+</head>
+<body>
+<form method="POST" onsubmit="return false">
+	<input type="text" name="nome" onblur="focou()"><br><br>
+
+	<select name="cidade" onchange="mudou(this)">
+		<option>São paulo</option>
+		<option>Rio de janeiro</option>
+		<option>Belo Horizonte</option>
+		<option>Recife</option>
+	</select><br><br>
+	<input type="submit" name="Enviar">
+</form>
+</body>
+</html>

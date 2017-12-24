@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+		function Animal(){
+			this.raca = "cao";
+			this.nome = "Lulu";
+			this.idade = 20;
+			this.peso = 10;
+
+			this.fazerXixi = function(){
+				console.log("xiiiiiiiiii");
+			}
+			this.comer = function(kg){
+				console.log("huum");
+				this.peso = this.peso + kg;
+			}
+
+		}
+		var lulu = new Animal();
+		lulu.raca = "Gato";
+		lulu.nome = "Lulu";
+
+		var xuxu = new Animal();
+		xuxu.raca="cao";
+		xuxu.nome = "Xuxu";
+	</script>
+</head>
+<body>
+	<p>Veja no console.</p>
+</body>
+</html>

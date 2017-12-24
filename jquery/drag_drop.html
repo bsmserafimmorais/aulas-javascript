@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#obj{
+			width: 150px;
+			background: #000;
+			height: 150px;
+			position: absolute;
+			cursor:move;
+		}
+	</style>
+</head>
+<body>
+<div id="obj"></div>
+
+
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		$('#obj').bind('mousedown', function(){
+			$('#obj').bind('mousemove', function(){
+				var x = event.pageX;
+				var y = event.pageY;
+				var width = $(this).width();
+				var height = $(this).height();
+
+				$(this).css('left', (x - (width/2))+ "px");
+				$(this).css('top',  (y - (height/2))+ "px");
+			});
+		});
+
+		$('#obj').bind('mouseup', function(){
+			$('#obj').unbind('mousemove');
+		});
+	});
+</script>
+</body>
+</html>

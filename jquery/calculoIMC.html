@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		
+	</script>
+</head>
+<body>
+<div style="margin-left: 40%;margin-top: 100px;">
+Altura em metros<br/>
+<input type="text" name="altura" id="altura"/><br/><br/>
+Peso em quilos<br/>
+<input type="text" name="peso" id="peso"><br/><br/>
+<button>Calcular IMC</button><br/><br/>
+<div id="resultado"></div>
+</div>
+
+
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+
+	$('button').bind("click", function(){
+
+		var altura = $('#altura').val();
+		var peso = $('#peso').val();
+
+		altura = altura.replace(',', '.');
+		peso = peso.replace(',', '.');
+
+		var imc = peso / (altura*altura);
+		if(imc < 16){
+			var traducao = 'Baixo peso muito grave';
+		}else if(imc >=17 && imc < 18.49 ){
+			var traducao = 'Baixo peso';
+		}else if(imc >= 18.50 && imc < 24.99){
+			var traducao = 'Peso normal';
+		}
+
+		$('#resultado').html("Seu IMC e: "+imc+" kg/m e seu status " + traducao);
+	});
+
+</script>
+</body>
+</html>

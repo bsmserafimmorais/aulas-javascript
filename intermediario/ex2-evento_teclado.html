@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function apertoubtn(event){
+			var tecla = event.keyCode;
+			var lista = document.getElementById("lista").innerHTML;
+			lista = lista + "<li><p>O número da letra é: "+tecla+"</p></li>";
+			document.getElementById("lista").innerHTML = lista;
+		}
+	</script>
+	<style type="text/css">
+		input{
+			margin-left: 30%;
+			width: 200px;
+			height: 30px;
+			font-size: 20px;
+			float: left;
+		}
+		label{
+			margin-left: 30%;
+			font-size: 20px;
+			margin-top: 50px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<label>Aperte alguma tecla que aparecerá seu numero.</label><br/><br/>
+	<input type="text" id="letra" onkeydown="apertoubtn(event)"/><br/><br/><br/><br/>
+
+	<ul id="lista">
+	</ul>
+
+</body>
+</html>

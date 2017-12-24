@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+		if(typeof localStorage.nome == "undefined" ){
+			localStorage.nome = prompt("Qual seu nome?")
+		}
+		docoment.getElementById("info").innerHTML = localStorage.nome;
+
+	</script>
+</head>
+<body>
+	<div id="info"></div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#n1{
+			width: 200px;
+			height: 200px;
+			border:1px solid #000;
+			float: left;
+			margin-right: 10px;
+			font-size: 100px;
+			text-align: center;
+			line-height: 200px;
+			background: #EEE;
+		}
+		#n2{
+			width: 200px;
+			height: 200px;
+			border:1px solid #000;
+			float: left;
+			margin-right: 10px;
+			font-size: 100px;
+			text-align: center;
+			line-height: 200px;
+			background: #EEE;
+		}
+		button{
+			width: 410px;
+			height: 40px;
+			margin-top: 10px;
+			font-size: 20px;
+		}
+	</style>
+	<script type="text/javascript">
+		function verificar(){
+			var n1 = document.getElementById("n1").innerHTML;
+			var n2 = document.getElementById("n2").value;
+
+			if(n1 == n2){
+				alert("Você acertou o numero.");
+			}else{
+				alert("você errou o número. ");
+			}
+			resetar();
+		}
+		function resetar(){
+			document.getElementById("n2").value = "";
+			var r = Math.floor(Math.random()*100);
+			document.getElementById("n1").innerHTML = r;
+		}
+	</script>
+</head>
+<body onload="resetar()">
+
+	<div id="n1">0</div>
+	<input type="text" id="n2">
+	<div style="clear:both;"></div>
+	<button onclick="verificar()">Verificar</button>
+
+
+</body>
+</html>
